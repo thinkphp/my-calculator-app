@@ -1,0 +1,104 @@
+/* Make the body take full height and use flexbox to center the content */
+body {
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #f4f4f4; /* Light background for the whole page */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* General styling for the calculator */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+/* Styling for the display/input area */
+.display {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    height: 60px;
+    font-size: 36px; /* Larger text for better readability */
+    text-align: right;
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus state for the input field */
+input:focus {
+    outline: none;
+    border-color: #4CAF50; /* Green border when focused */
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Green glow effect */
+}
+
+/* Button grid container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+/* Styling for the buttons */
+button {
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    color: #333;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #e1e1e1;
+    transform: translateY(-3px);
+}
+
+/* Active state for buttons */
+button:active {
+    background-color: #d1d1d1;
+    transform: translateY(1px);
+}
+
+/* Special style for the "Equal" button */
+button:nth-child(16) {
+    background-color: #4CAF50;  /* Green background */
+    color: white;
+}
+
+button:nth-child(16):hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+/* Special style for "Clear" button */
+button:nth-child(15) {
+    background-color: #f44336;  /* Red background */
+    color: white;
+}
+
+button:nth-child(15):hover {
+    background-color: #e53935;  /* Darker red on hover */
+}
+
