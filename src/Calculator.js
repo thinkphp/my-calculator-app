@@ -27,7 +27,7 @@ function Calculator() {
         setResult('');
     };
 
-    return (
+    return (      
         <div className="calculator">
             <div className="display">
                 <input
